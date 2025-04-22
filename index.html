@@ -3,20 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>五子棋 AI 对战</title>
+  <title>五子棋大师</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>五子棋 AI 对战</h1>
-    <div class="game-controls">
-      <button id="restart">重新开始</button>
-      <button id="hint">提示</button>
-      <button id="undo">撤销</button>
-      <div id="status">当前回合: 玩家（黑棋）</div>
+  <div class="app-container">
+    <div class="game-card">
+      <div class="title">
+        <span class="icon">🎮</span>
+        <h1>五子棋大师</h1>
+      </div>
+
+      <div class="players">
+        <div class="player">
+          <div class="avatar black">
+            <span>您</span>
+          </div>
+          <div class="player-info">您 (黑子)</div>
+        </div>
+        
+        <div class="vs">VS</div>
+        
+        <div class="player">
+          <div class="avatar white">
+            <span>AI</span>
+          </div>
+          <div class="player-info">AI (白子)</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="undo" class="btn-gray">黑子回合</button>
+        <button id="restart" class="btn-purple">
+          <span class="icon-refresh">↻</span>
+          重新开始
+        </button>
+      </div>
+
+      <div id="board-container">
+        <canvas id="board"></canvas>
+      </div>
+
+      <div class="bottom-controls">
+        <button id="hint" class="btn-yellow">
+          <span class="icon-hint">💡</span>
+          提示
+        </button>
+        <button id="help" class="btn-pink">
+          <span class="icon-help">❓</span>
+          帮助
+        </button>
+      </div>
     </div>
-    <canvas id="board"></canvas>
   </div>
+
+  <footer>
+    <div class="copyright">
+      <span class="logo">YourWare</span>
+      <span class="separator">|</span>
+      <span class="author">陈立新</span>
+    </div>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
