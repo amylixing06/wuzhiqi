@@ -1,4 +1,4 @@
-name: 发布静态网站
+name: 部署静态网站
 
 on:
   push:
@@ -9,16 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 获取代码
+      - name: 直接部署
         run: |
-          git clone https://github.com/${{ github.repository }}.git .
-          git checkout ${{ github.ref_name }}
-          
-      - name: 准备网站文件
-        run: |
-          echo "准备静态网站文件"
-          
-      - name: 发布
-        run: |
-          echo "网站已准备完毕，等待GitHub Pages服务发布"
-          echo "无需额外的下载操作" 
+          echo "当前工作目录: $(pwd)"
+          echo "列出文件:"
+          ls -la
+          echo "准备网站文件完成"
+          echo "站点内容将直接从仓库发布，无需额外下载" 
