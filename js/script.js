@@ -19,7 +19,8 @@ let moveHistory = [];
 function initBoard() {
   // 设置canvas尺寸为正方形
   const containerWidth = document.getElementById('board-container').clientWidth;
-  const size = Math.min(containerWidth, 350);
+  // 限制最大尺寸，移动设备屏幕一般较小
+  const size = Math.min(containerWidth, 320);
   canvas.width = size;
   canvas.height = size;
   
